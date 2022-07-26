@@ -1,0 +1,39 @@
+﻿<h1>Welcome to product Index</h1>
+@using WebApplication2.Models
+@model  List<Product>
+
+
+<h3>Product Controller -- Index Page</h3>
+<hr/>
+
+@* 
+    <h3> @ViewBag.Message </h3>  
+*@
+
+<a href="/Product/Create">Create New</a>
+
+   <table>
+    <tr>
+        <th>Product Id</th>
+        <th>Product Name</th>
+        <th>Unit Price</th>
+        <th>Quantity</th>
+        <th></th>
+    </tr>
+
+    @foreach(Product item in Model)
+    {
+         <tr>
+            <td>@item.ProductId</td>
+            <td>@item.ProductName</td>
+            <td>@item.UnitPrice</td>
+            <td>@item.Quantity</td>     
+            <td>
+                <a href="/Product/Details/@item.ProductId">View Details</a>
+            </td>
+         </tr>
+    }
+
+   
+</table>
+

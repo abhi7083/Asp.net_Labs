@@ -1,0 +1,21 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using WebApplication2.Models
+@model  Product
+
+
+<h3>Selected Product Details</h3>
+
+
+<div>
+    Product Id  :  @Model.ProductId  <br/>
+    Product Name  :  @Model.ProductName  <br/>
+    Unit Price  :  @Model.UnitPrice<br/>
+    Quantity  :  @Model.Quantity<br/>
+</div>
+
+<hr/>
+ <a href="/Product/Index">Back to List</a>

@@ -1,0 +1,43 @@
+﻿@using WebApplication2.Models
+@model  Employee
+
+
+<h3>Edit Employee</h3>
+
+ 
+<form  action="/Employee/Edit" method="post">
+    <label>Employee Id  : </label>
+    <input name="EmpId" type="text" readonly value="@Model.EmpId" />
+    <br/><br/>
+
+    <label>Employee Name  : </label>
+    <input name="EmpName" type="text" value="@Model.EmpName" />
+    <br/><br/>
+
+     <label>Employee Job  : </label>
+    <input name="Job" type="text" value="@Model.Job" />
+    <br/><br/>
+
+    <label>Employee Salary : </label>
+    <input name="Salary" type="text" value="@Model.Salary" />
+    <br/><br/>
+
+    
+    <label>Employee Deptno : </label>
+    <input name="Deptno" type="text" value="@Model.Deptno" />
+    <br/><br/>
+
+    <input type="submit" value="Edit" />
+</form>
+
+
+@{
+    if(ViewBag.RequestType == "POST")
+    {
+        <h1>@ViewBag.ErrorMessage</h1>
+    }
+}
+
+
+<hr/>
+ <a href="/Employee/Index">Back to List</a>
